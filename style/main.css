@@ -1,0 +1,159 @@
+.tab-navbar{
+    width: 100%;
+    height: 8px;
+    background-color: #15998e;
+}
+
+
+body{
+    background-color: #eee;
+}
+
+
+.myContainer {
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 1px solid #eee; */
+  }
+
+
+  /* Styling Navbar and its section*/
+.logo{
+      width: 10%;
+      height: 60px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      float: left;
+}
+
+
+.myImage{
+    width: 100%;
+    height: 100%;
+}
+
+.search {
+    float: left;
+    height: 60px;
+    float: left;
+    margin-left: 4%;
+    width: 50%;
+    /* border: 1px solid #EEE; */
+    padding-top: 10px;
+    /* padding-left: 1%; */
+}
+
+.search-input{
+    background-color: #eee;
+    border: none;
+    width: 90%;
+    height: 90%;
+    text-indent: 5%;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+    
+}
+::placeholder{
+    color: #15998e;
+}
+#search-submit{
+    background-color:#15998e ;
+    border: none;
+    float: left;
+    height: 90%;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: bold;
+}
+
+.SignOrRegister{
+    background-color: white;
+    height: 60px;
+    width: 15%;
+    float: left;
+    /* margin-left: 10%; */
+    /* padding-top: 21px; */
+
+}
+
+.SignOrRegister a{
+    margin-top: 12%;
+    color: rgb(35, 71, 148) ;
+    margin-left: 4%;
+    float: left;
+}
+
+.SignOrRegister img{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    float: left;
+    margin-left: 15%;
+}
+
+.Veritcal{
+    width: 1px;
+    height: 60%;
+    /* border-left: 1px solid #eee; */
+    float: left;
+    margin-top: 7%;
+    margin-left: 10px;
+}
+
+
+.Navigation{
+    background-color: white;
+    height: 60px;
+    width: 10%;
+    float: left;
+    /* padding-top: 21px; */
+}
+
+.Navigation img{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    float: left;
+    margin-left: 15%;
+
+}
+
+.Navigation a{
+    margin-top: 18%;
+    color: #000 ;
+    margin-left: 4%;
+    float: left;
+}
+
+.Veritcal1{
+    width: 1px;
+    height: 60%;
+    border-left: 1px solid #eee;
+    float: left;
+    margin-top: 7%;
+    margin-left: 10px;
+}
+
+.Shopping{
+    background-color: white;
+    height: 60px;
+    width: 10%;
+    float: left;
+}
+.Shopping a{
+    margin-top: 18%;
+    color: #000 ;
+    margin-left: 4%;
+    float: left;
+}
+.Shopping img{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    float: left;
+    margin-left: 15%;
+}
+  /* End Navbar and its section*/
