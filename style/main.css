@@ -22,11 +22,12 @@ body{
 
   /* Styling Navbar and its section*/
 .logo{
-      width: 10%;
+      width: 15%;
       height: 60px;
       padding-top: 2px;
       padding-bottom: 2px;
       float: left;
+      /* background-color: red; */
 }
 
 
@@ -40,7 +41,7 @@ body{
     height: 60px;
     float: left;
     margin-left: 4%;
-    width: 50%;
+    width: 45%;
     /* border: 1px solid #EEE; */
     padding-top: 10px;
     /* padding-left: 1%; */
@@ -49,7 +50,7 @@ body{
 .search-input{
     background-color: #eee;
     border: none;
-    width: 90%;
+    width: 85%;
     height: 90%;
     text-indent: 5%;
     float: left;
@@ -81,7 +82,7 @@ body{
 
 .SignOrRegister a{
     margin-top: 12%;
-    color: rgb(35, 71, 148) ;
+    color: black;
     margin-left: 4%;
     float: left;
 }
@@ -144,18 +145,18 @@ body{
     float: left;
 }
 .Shopping a{
-    margin-top: 18%;
+    margin-top: 5%;
     color: #000 ;
     margin-left: 4%;
     float: left;
-}
+ }
 .Shopping img{
     width: 30px;
     height: 30px;
-    margin-top: 15px;
+    margin-top: 9px;
     float: left;
     margin-left: 15%;
-}
+} 
   /* End Navbar and its section*/
 /* flipping cards styling */
 /*
@@ -257,7 +258,7 @@ Flip card
     font-size:13px;
 }
 .card .scheme-btn{
-    background-color: teal;
+    background-color: #48BCD1;
     color : white;
     border-radius:10px;
     font-size: 9px;
@@ -298,3 +299,8 @@ i{
     display: table-column-group;
 }
 
+
+  /* Footer Start */
+footer{
+    background-color: #fff;
+}
