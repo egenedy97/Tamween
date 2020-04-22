@@ -6,7 +6,7 @@
 
 
 body{
-    background-color: #eee;
+    background-color: #eee ;
 }
 
 
@@ -157,3 +157,144 @@ body{
     margin-left: 15%;
 }
   /* End Navbar and its section*/
+/* flipping cards styling */
+/*
+For demo purpose
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto|Barrio");
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Barrio", cursive;
+}
+
+.card-title {
+  max-width: 100%;
+  font-size: 4vw;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  min-width: 100%;
+  height: 38vh;
+  min-height: 38vh;
+}
+
+.text-white .card-img {
+  -webkit-filter: brightness(75%) saturate(50%);
+          filter: brightness(75%) saturate(50%);
+}
+
+/*
+Flip card
+*/
+.card-flip {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.card-flip .card {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.card-flip .card:first-of-type {
+  tranform: rotateY(0deg);
+}
+.card-flip .card:last-of-type {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: flex;
+}
+.card-flip:hover .card:first-of-type {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.card-flip:hover .card:last-of-type {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.card-bordered{
+    border: 2px solid #45b08c;
+    border-top-width:40px;
+    /* border-radius: 15px; */
+}
+.card-bordered .card {
+     margin-bottom: 0; 
+     border-radius:0px;
+} 
+.card-bordered{
+    margin-bottom: 10px; 
+} 
+.card h6{
+    font-size: 15px;
+    margin:10px 5%;
+}
+
+.col-sm-3,.col-sm-2,.col-sm-4{
+    padding:0;
+}
+.card-footer{
+    background-color: white;
+    padding:10px 2.5%;
+    
+}
+.card-footer label{
+    font-size:13px;
+}
+.card .scheme-btn{
+    background-color: teal;
+    color : white;
+    border-radius:10px;
+    font-size: 9px;
+    font-weight: 800;
+    width:80%;
+    padding:10px 1.5%;
+    margin:30px 10%;
+}
+.card-footer .scheme-btn{
+    background-color: teal;
+    color : white;
+    border-radius:10px;
+    font-size: 12px;
+    font-weight: 800;
+    width:48%;
+    padding:10px 1.5%;
+    margin:0%;
+}
+
+#amount{
+    width:45%;
+    margin-right:0%;
+    display:inline-block;
+}
+.list-group-item.active{
+    font-weight: 800;
+    background-color: teal;
+}
+.price-holder{
+    color:teal;
+    font-size: 13px;
+    text-align:right;
+    margin: 30px 5% 5px auto;
+}
+i{
+    font-size: 20px;
+    color:teal;
+    display: table-column-group;
+}
+
