@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tamween</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="refresh" content="3"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="../style/owl.carousel.min.css">
+  <link rel="stylesheet" href="../style/owl.theme.default.min.css">
+
+  <script src="../js/mdb/jquery.js"></script>
+  <script src="../js/mdb/popper.js"></script>
+  <script src="../js/mdb/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+  <style>
+    
+    .btn-outline-success{
+      color:#5cdb95;
+      border-color:#5cdb95;
+    }
+    nav a{
+      color:#5cdb95;
+    }
+    label{
+      color:black;
+      font-weight: 900;
+    }
+    .custom-file-label::after{
+      background-color:#edf5e1;
+    }
+    .sub-btn{
+      background-color:#edf5e1;
+      margin:auto 80%;
+    }
+    .form-control,.input-group{
+      width:50%;
+      margin:10px 10%;
+    }
+    
+  </style>
+  
+     <!-- start of new navbar -->
+   
+     <div class="tab-navbar"></div>
+     <nav class="navbar navbar-white bg-white">
+         <div class="myContainer">
+           <div class="logo">
+             <img src="../Images/CarLogo.png" alt="...." class="myImage">
+           </div>
+     
+     
+           <div class="search">
+             <input type="text" placeholder="What is you are looking for?" class="search-input">
+             <!-- <input type="submit" value="search" class="search-submit"> -->
+             <button id="search-submit" role="submit">search</button>
+           </div>
+           <div class="SignOrRegister">
+             <a href="user_dashboard.html"><img src="../Images/user.png"></a>
+             <div class="Veritcal"></div>
+           </div>
+           <div class="Navigation">
+             <img src="../Images/pin.png">
+             <a>Location</a>
+             <div class="Veritcal1"></div>
+           </div>
+           <div class="Shopping">
+             <a href="cart.html">
+               <img src="../Images/shopping-cart.png">
+             </a>
+           </div>
+         </div>
+     </nav>
+     
+ 
+     <!-- end of new navbar -->
+
+<div class="row py-5 px-5" style="background-color: #eee;" >
+  <div class="col-sm-3">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-main" role="tab" aria-controls="home">Main Info</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-family" role="tab" aria-controls="profile">Family Members Data</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-prefrences" role="tab" aria-controls="messages">Prefrences</a>
+    </div>
+  </div>
+  <div class="col-sm-8 px-5 py-5 ml-5" style="border-radius:10px;border:2px solid teal;background-color: #45b08c;color:black">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-main" role="tabpanel" aria-labelledby="list-home-list">
+        <div class='container my-5' >
+          <h1 class= "mb-5" style="color:black"> User Dashboard </h1>
+          <form>
+            <div class="form-group" style="width: 50%;float:left">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 50%;float:left">
+              <label for="id">National ID</label>
+              <input type="text" name="name" id="id" class="form-control" placeholder="Enter Your national ID" aria-describedby="helpId">
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group" style="width: 50%;float:left">
+              <label for="family-num">Set Your family members no.</label>
+              <input type="number" name="family-num" id="family-num" class="form-control" placeholder="family members" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 50%;float:left">
+              <label for="address">Detailed Address</label>
+              <textarea name="address" id="address" class="form-control" placeholder="Enter Your detailed address" aria-describedby="helpId" rows="1">
+              </textarea>
+            </div>
+            <div class="clearfix"></div>
+            <div class="input-group mb-3"style="width: 45%;float:left; margin-left:5%">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background-color: #edf5e1;color:#05386b;">Profile Picture</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label" for="image">Set your profile picture</label>
+              </div>
+            </div>
+            <input type="submit" class="btn btn-lg my-3 sub-btn" value="save changes">
+          </form>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="list-family" role="tabpanel" aria-labelledby="list-profile-list">
+        <form>
+          <h1> First Child</h1><hr width="30%" style="margin:0px">
+          <div class="child-data">
+            <div id="first" class="form-group" style="width: 33%;float:left">
+              <label for="id">National ID</label>
+              <input type="text" name="id" id="id" class="form-control" placeholder="Enter national ID" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 33%;float:left">
+              <label for="age">Age</label>
+              <input type="number" name="age" id="age" class="form-control" placeholder="member age" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 33%;float:left">
+              <label for="name">Gender</label>
+              <select type="text" name="gender" id="gender" class="form-control" placeholder="Chosse gender" aria-describedby="helpId">
+                <option>
+                    MALE
+                </option>
+                <option>
+                    FEMALE
+                </option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+            <div class="input-group mb-3"style="width: 60%; margin-left:5%">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background-color: #edf5e1;color:#05386b;">National ID Picture</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label" for="image">upload National ID  picture</label>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h1> Second Child</h1><hr width="30%" style="margin:0px">
+          <div class="child-data">
+            <div id="first" class="form-group" style="width: 33%;float:left">
+              <label for="id">National ID</label>
+              <input type="text" name="id" id="id" class="form-control" placeholder="Enter national ID" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 33%;float:left">
+              <label for="age">Age</label>
+              <input type="number" name="age" id="age" class="form-control" placeholder="member age" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 33%;float:left">
+              <label for="name">Gender</label>
+              <select type="text" name="gender" id="gender" class="form-control" placeholder="Chosse gender" aria-describedby="helpId">
+                <option>
+                    MALE
+                </option>
+                <option>
+                    FEMALE
+                </option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+            <div class="input-group mb-3"style="width: 55%; margin-left:5%">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background-color: #edf5e1;color:#05386b;">National ID Picture</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label" for="image">upload National ID  picture</label>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h1> Third Child</h1><hr width="30%" style="margin:0px">
+          <div class="child-data">
+            <div id="first" class="form-group" style="width: 33%;float:left">
+              <label for="id">National ID</label>
+              <input type="text" name="id" id="id" class="form-control" placeholder="Enter national ID" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 33%;float:left">
+              <label for="age">Age</label>
+              <input type="number" name="age" id="age" class="form-control" placeholder="member age" aria-describedby="helpId">
+            </div>
+            <div class="form-group" style="width: 33%;float:left">
+              <label for="name">Gender</label>
+              <select type="text" name="gender" id="gender" class="form-control" placeholder="Chosse gender" aria-describedby="helpId">
+                <option>
+                    MALE
+                </option>
+                <option>
+                    FEMALE
+                </option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+            <div class="input-group mb-3"style="width: 55%;margin-left:5%">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background-color: #edf5e1;color:#05386b;">National ID Picture</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label" for="image">upload National ID  picture</label>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <input type="submit" class="btn btn-lg my-3 sub-btn" value="save changes">
+        </form>
+      </div>
+      <div class="tab-pane fade" id="list-prefrences" role="tabpanel" aria-labelledby="list-messages-list">
+        
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-sm-8 px-5 my-5" ></div> -->
+</div>
+</body>
+</html>

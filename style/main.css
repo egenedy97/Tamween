@@ -90,7 +90,7 @@ body{
 .SignOrRegister img{
     width: 30px;
     height: 30px;
-    margin-top: 15px;
+    margin-top: -5px;
     float: left;
     margin-left: 15%;
 }
@@ -232,14 +232,13 @@ Flip card
 .card-bordered{
     border: 2px solid #45b08c;
     border-top-width:40px;
-    /* border-radius: 15px; */
+    margin-bottom: 10px; 
+    margin-right:10px;
+    margin-left: 10px;
 }
 .card-bordered .card {
      margin-bottom: 0; 
      border-radius:0px;
-} 
-.card-bordered{
-    margin-bottom: 10px; 
 } 
 .card h6{
     font-size: 15px;
@@ -249,7 +248,7 @@ Flip card
 .col-sm-3,.col-sm-2,.col-sm-4{
     padding:0;
 }
-.card-footer{
+.card-bordered .card-footer{
     background-color: white;
     padding:10px 2.5%;
     
@@ -293,14 +292,27 @@ Flip card
     text-align:right;
     margin: 30px 5% 5px auto;
 }
-i{
-    font-size: 20px;
+.social-links li a i{
+    font-size: 40px;
     color:teal;
-    display: table-column-group;
 }
+
+.social-links{
+    padding:0;
+    list-style: none;
+    text-align: center;
+    margin-top:30px;
+}
+
+.social-links li{
+    margin: auto 5px;
+    display:inline-block;
+}
+
 
 
   /* Footer Start */
 footer{
     background-color: #fff;
 }
+

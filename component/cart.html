@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <title>Tamween</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="refresh" content="3"> -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../style/bootstrap.min.css">
+        <link rel="stylesheet" href="../style/main.css">
+        <link rel="stylesheet" href="../style/owl.carousel.min.css">
+        <link rel="stylesheet" href="../style/owl.theme.default.min.css">
+      
+        <script src="../js/mdb/jquery.js"></script>
+        <script src="../js/mdb/popper.js"></script>
+        <script src="../js/mdb/bootstrap.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      </head>
+</head>
+<body>
+  <style>
+    
+    label{
+      /* color:#05386b; */
+      font-weight: 900;
+    }
+    .custom-file-label::after{
+      background-color:#edf5e1;
+    }
+    .sub-btn{
+      background-color:#edf5e1;
+      /* margin:auto 80%; */
+    }
+    .form-control,.input-group{
+      width:50%;
+      margin:10px 10%;
+    }
+    
+    
+    .quantity {
+        float: left;
+        margin-right: 15px;
+        background-color: #eee;
+        position: relative;
+        width: 80px;
+        overflow: hidden
+    }
+
+    .quantity input {
+        margin: 0;
+        text-align: center;
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        float: right;
+        color: #000;
+        font-size: 20px;
+        border: 0;
+        outline: 0;
+        background-color: #F6F6F6
+    }
+
+    .quantity input.qty {
+        position: relative;
+        border: 0;
+        width: 100%;
+        height: 40px;
+        padding: 10px 25px 10px 10px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 15px;
+        border-radius: 0;
+        background-clip: padding-box
+    }
+
+    .quantity .minus, .quantity .plus {
+        line-height: 0;
+        background-clip: padding-box;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-background-size: 6px 30px;
+        -moz-background-size: 6px 30px;
+        color: #bbb;
+        font-size: 20px;
+        position: absolute;
+        height: 50%;
+        border: 0;
+        right: 0;
+        padding: 0;
+        width: 25px;
+        z-index: 3
+    }
+
+    .quantity .minus:hover, .quantity .plus:hover {
+        background-color: #dad8da
+    }
+
+    .quantity .minus {
+        bottom: 0
+    }
+    .shopping-cart {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .shopping-cart .card-header{
+        background-color: teal;
+    }
+  </style>
+
+   <!-- start of new navbar -->
+
+    <div class="tab-navbar"></div>
+    <nav class="navbar navbar-white bg-white">
+        <div class="myContainer">
+          <div class="logo">
+            <img src="../Images/CarLogo.png" alt="...." class="myImage">
+          </div>
+    
+    
+          <div class="search">
+            <input type="text" placeholder="What is you are looking for?" class="search-input">
+            <!-- <input type="submit" value="search" class="search-submit"> -->
+            <button id="search-submit" role="submit">search</button>
+          </div>
+          <div class="SignOrRegister">
+            <a href="user_dashboard.html"><img src="../Images/user.png"></a>
+            <div class="Veritcal"></div>
+          </div>
+          <div class="Navigation">
+            <img src="../Images/pin.png">
+            <a>Location</a>
+            <div class="Veritcal1"></div>
+          </div>
+          <div class="Shopping">
+            <a>
+              <img src="../Images/shopping-cart.png">
+            </a>
+          </div>
+        </div>
+    </nav>
+    
+
+    <!-- end of new navbar -->
+
+    <!-- start of cart section -->
+
+    <div class="row" >
+        <!-- <div class="col-sm-3">
+        </div> -->
+        <div class="col-sm-11 px-3 my-5 ml-5" style="border-radius:10px;border:2px solid #05386b;background-color: #45b08c;">
+            <div class='container my-5' >
+                <h1 class= "mb-5">Cart</h1>
+                <form>
+                <div class="form-group" style="width: 50%;float:left">
+                    <label for="date">Choose Delivery Date</label>
+                    <select type="text" name="date" id="date" class="form-control" placeholder="Chosse date" aria-describedby="helpId">
+                        <option>
+                            Sunday
+                        </option>
+                        <option>
+                            Tuesday
+                        </option>
+                        <option>
+                            Friday
+                        </option>
+                    </select>
+                </div>
+                <input type="submit" class="btn btn-lg sub-btn" value="schedule"style="float:left;margin-top:35px;">
+                </form>
+            </div>
+           
+            <div class="clearfix"></div>
+            <hr class="px-5"></hr>
+
+            
+                <h1 class= "mb-5 col-md-12">Items in your Cart</h1>
+                <div class="card shopping-cart mb-5">
+                <div class="card-header text-light">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Shopping cart
+                    <a href="../Tamween.html" class="btn btn-secondary btn-sm float-right">Continiue shopping</a>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="card-body">
+                    <div class="owl-carousel owl-theme " id="cards-holder"></div>
+                    <hr>
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-primary float-right pull-right">Update shopping cart</a>
+                    </div>
+                </div>
+                  <div class="card-footer">
+                      <div class="coupon col-md-5 col-sm-5 no-padding-left float-left">
+                        <input type="text" class="text-center" placeholder="cupone code">
+                        <input type="submit" class="btn scheme-btn ml-3" value="Use cupone">
+                      </div>
+                      <div class="float-right" style="margin: 10px">
+                        <a href="" class="btn btn-success float-right ml-4">Checkout</a>
+                          <div class="float-right" style="margin: 5px">
+                              Total price: <b>50.00 L.E.</b>
+                          </div>
+                          
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end of cart section -->
+
+    <!-- start of new footer -->
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md">
+              <img class="mb-2" src="../Images/tamweeen.png" alt="" width="100" height="50">
+              <small class="d-block mb-3 text-muted">&copy; 2020-2021</small>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Features</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Cool stuff</a></li>
+                <li><a class="text-muted" href="#">Random feature</a></li>
+                <li><a class="text-muted" href="#">Team feature</a></li>
+                <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                <li><a class="text-muted" href="#">Another one</a></li>
+                <li><a class="text-muted" href="#">Last time</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Resource</a></li>
+                <li><a class="text-muted" href="#">Resource name</a></li>
+                <li><a class="text-muted" href="#">Another resource</a></li>
+                <li><a class="text-muted" href="#">Final resource</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Team</a></li>
+                <li><a class="text-muted" href="#">Locations</a></li>
+                <li><a class="text-muted" href="#">Privacy</a></li>
+                <li><a class="text-muted" href="#">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- end of new footer -->
+</body>
+
+<script>
+    $(document).ready(function () {
+      for (var i = 0; i < 10; i++) {
+        $("#cards-holder").append('<div class="card-bordered"> <div class="card card-flip"> <div class="card bg-white text-dark"> <img class="card-img img-fluid" src="../Images/products/product1.jpg" alt=""> <h6 >Product Name</h6> <span class="price-holder">15.95 egp/item</span> </div> <div class="card"> <button class="btn scheme-btn">view details</button> <button class="btn scheme-btn">view similar items</button> <ul class="social-links"> <li><a href="#"><i class="fab fa-facebook-square"></i></a></li> <li><a href="#"><i class="fab fa-instagram-square"></i></a></li> <li><a href="#"><i class="fab fa-twitter-square"></i></a></li> </ul> </div> </div> <div class= "card-footer clearfix"><div class="quantity float-left"> <input type="button" value="+" class="plus"> <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4"> <input type="button" value="-" class="minus"> </div> <button type="button" class="btn btn-outline-danger btn-xs float-right"> <i class="fa fa-trash" aria-hidden="true"></i> </button></div></div>');
+      }
+      $('.owl-carousel').owlCarousel({
+        loop:false,
+        margin:1,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+      });
+    //   $('.add-button').click(function(){
+    //     var quantity = $(this).prev().val();
+    //     console.log(quantity);
+    //     swal({
+    //       text:"You have orderered"+quantity+" item of this product. Your order have been added succesfully to your cart",
+    //       icon:"success",
+    //       timer: 3000
+    //     });
+    //   });
+      
+    });
+  </script>
+
+</html>
